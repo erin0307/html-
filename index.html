@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html data-page-node-id="h2xZ3cstMrsGR3BntL2RXD" lang="zh-CN">
+<head data-page-node-id="ss8XudYlDbUZirOZTsnWVi">
+<script data-page-node-id="RonJzY4whEVr8wFlXWjfSu" src="/page/page_comm/inject.js"></script>
+<meta data-page-node-id="phIFjMcHTDn4OOW98APWhd" charset="UTF-8">
+<meta data-page-node-id="K1yoYiaK5wbEgLiGXdvs9q" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="AVSatVQSUtZXgt1OEdRECE" data-pnid-children="awfYpPEDHIeF78TAhaevbY">IFYTM001 技术数学 · 吴昊峻 10月月考 学情分析与提升计划</title>
+<style data-page-node-id="E8qT8q4t3GYa5DZ6c7fTa9" data-pnid-children="ELeChnMYJaTgqo7sTDnYd6">
+  :root{
+    --red:#CC0000;          /* NCUK 品牌红 */
+    --red2:#A30000;
+    --purple:#6B3FA0;       /* IYO 国际大一紫 */
+    --navy:#1a2b4a;
+    --navy2:#27406b;
+    --cyan:#0891b2;
+    --gold:#e8a838;
+    --green:#059669;
+    --bg:#eef2f7;
+    --ink:#1e293b;
+    --muted:#64748b;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;
+    font-size:16px; line-height:1.75; color:var(--ink); background:var(--bg);
+    margin:0; padding:0 14px 60px;
+  }
+  /* banner */
+  .banner{
+    background:linear-gradient(135deg,var(--red),var(--red2));
+    color:#fff; padding:22px 24px; border-radius:0 0 14px 14px;
+    box-shadow:0 6px 20px rgba(204,0,0,.28); margin:0 -14px 0;
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px;
+  }
+  .banner h1{font-size:21px; margin:0; font-weight:800; letter-spacing:.4px;}
+  .banner .sub{font-size:12.5px; opacity:.92; margin-top:6px;}
+  .banner .tag{display:inline-block; background:rgba(255,255,255,.18); border-radius:20px; padding:3px 12px; font-size:12px; margin-right:6px; margin-top:6px;}
+  .wrap{max-width:960px; margin:18px auto 0; background:#fff; padding:28px 32px 36px; border-radius:14px; box-shadow:0 8px 30px rgba(30,41,59,.10);}
+
+  h2{font-size:19px; font-weight:800; color:var(--navy); border-left:5px solid var(--red); padding-left:12px; margin:30px 0 12px;}
+  h3{font-size:15.5px; font-weight:800; color:var(--purple); margin:20px 0 8px;}
+  p{margin:7px 0;}
+  .subtitle{color:var(--muted); font-size:13px; text-align:center; margin:4px 0 0;}
+  .en{background:#f1f5f9; padding:10px 14px; border-left:4px solid var(--cyan); border-radius:0 8px 8px 0; margin:10px 0; font-size:13px; color:#334155;}
+  .note{background:#fff7e6; padding:10px 14px; border-left:4px solid var(--gold); border-radius:0 8px 8px 0; margin:10px 0; font-size:13px;}
+  .danger{background:#fef2f2; padding:10px 14px; border-left:4px solid var(--red); border-radius:0 8px 8px 0; margin:10px 0; font-size:13px;}
+
+  /* tab nav */
+  .tabs{position:sticky; top:0; z-index:30; background:var(--navy); border-radius:12px; padding:8px; margin:16px 0 6px; display:flex; flex-wrap:wrap; gap:6px; box-shadow:0 4px 14px rgba(26,43,74,.25);}
+  .tabs button{
+    flex:1 1 auto; min-width:120px; background:transparent; color:#cdd9ec; border:none;
+    border-radius:8px; padding:10px 8px; font-size:13.5px; font-weight:700; cursor:pointer; transition:.12s;
+  }
+  .tabs button:hover{background:rgba(255,255,255,.10); color:#fff;}
+  .tabs button.active{background:#fff; color:var(--navy);}
+
+  table{border-collapse:collapse; width:100%; font-size:13px; margin:12px 0; overflow:hidden; border-radius:8px;}
+  th,td{border:1px solid #cbd5e1; padding:7px 9px; vertical-align:top; text-align:left;}
+  th{background:var(--navy); color:#fff; font-weight:700;}
+  tr:nth-child(even) td{background:#f8fafc;}
+
+  ul{margin:8px 0 8px 22px; padding:0;}
+  li{margin:4px 0;}
+
+  /* student analysis card */
+  .stu{border:1px solid #e2e8f0; border-radius:12px; padding:16px 18px; margin:16px 0; background:#fff;}
+  .stu h3{margin-top:0; display:flex; align-items:center; gap:10px;}
+  .pill{display:inline-block; font-size:12px; font-weight:800; color:#fff; border-radius:20px; padding:3px 12px;}
+  .pill.red{background:var(--red);} .pill.purple{background:var(--purple);} .pill.gold{background:var(--gold);} .pill.gray{background:#64748b;}
+  .tags{margin:8px 0;}
+  .tagx{display:inline-block; background:#fef2f2; color:var(--red); border:1px solid #fecaca; border-radius:6px; padding:2px 9px; font-size:12px; margin:3px 4px 0 0; font-weight:600;}
+  .tagx.p{background:#eef2ff; color:#4338ca; border-color:#c7d2fe;}
+  .tagx.m{background:#fff7e6; color:#b45309; border-color:#fde68a;}
+
+  /* practice cards */
+  .qcard{border:1px solid #e2e8f0; border-radius:10px; padding:14px 16px; margin:14px 0; background:#fff;}
+  .qcard.info{background:#f0f9ff; border-color:#bae6fd;}
+  .qnum{font-weight:800; color:var(--red); margin:0 0 6px;}
+  .en-q{background:#f8fbff; border-left:4px solid var(--cyan); padding:10px 13px; border-radius:0 8px 8px 0; font-size:13.5px; color:#0f3a4d; margin:8px 0;}
+  .en-q b{color:var(--red);}
+  .zh-q{background:#faf5ff; border-left:4px solid var(--purple); padding:9px 13px; border-radius:0 8px 8px 0; margin:0 0 10px; font-size:13.5px; color:#4c1d95;}
+  .self-input{width:100%; border:1px dashed #94a3b8; border-radius:8px; padding:9px 12px; font-size:14px; font-family:inherit; margin-top:6px; background:#fffdf5;}
+  .self-input:focus{outline:none; border-color:var(--purple); box-shadow:0 0 0 3px rgba(107,63,160,.12);}
+  .toggle{background:var(--navy); color:#fff; border:none; border-radius:8px; padding:8px 14px; font-size:13px; font-weight:700; cursor:pointer; margin-top:10px;}
+  .toggle:hover{background:var(--navy2);}
+  .ans-body{display:none; margin-top:10px; border-top:1px dashed #cbd5e1; padding-top:10px;}
+  .ans{font-weight:800; color:var(--green); margin:0;}
+  .exp{background:#ecfeff; border-left:4px solid var(--cyan); padding:9px 13px; border-radius:0 8px 8px 0; margin:8px 0; font-size:13.5px; color:#0e7490;}
+  .ans-zh{color:#334155; font-size:13px; margin:4px 0;}
+  .zh-hint{font-size:12.5px; color:var(--purple); background:#faf5ff; border-left:4px solid var(--purple); padding:7px 12px; border-radius:0 8px 8px 0; margin:6px 0;}
+
+  /* knowledge points */
+  .kp{border-left:5px solid var(--red); background:#fff; border-radius:0 10px 10px 0; padding:12px 16px; margin:12px 0; box-shadow:0 2px 8px rgba(30,41,59,.06);}
+  .kp.p2{border-left-color:var(--gold);}
+  .kp.p3{border-left-color:var(--cyan);}
+  .kp.p4{border-left-color:#94a3b8;}
+  .kp h4{margin:0 0 6px; font-size:15px; color:var(--navy);}
+  .kp .lv{font-size:11px; font-weight:800; color:#fff; border-radius:20px; padding:2px 10px; margin-left:8px;}
+  .lv1{background:var(--red);} .lv2{background:var(--gold);} .lv3{background:var(--cyan);} .lv4{background:#94a3b8;}
+
+  /* plan */
+  .week{border:1px solid #e2e8f0; border-radius:12px; padding:14px 16px; margin:12px 0; background:#fff;}
+  .week .wk{font-weight:800; color:var(--purple); font-size:15px; margin-bottom:6px;}
+
+  /* quiz module */
+  .quiz-box{border:2px solid var(--purple); border-radius:14px; padding:18px; margin:14px 0; background:#fcfaff;}
+  .quiz-bar{height:12px; background:#e2e8f0; border-radius:20px; overflow:hidden; margin:10px 0 6px;}
+  .quiz-bar > div{height:100%; background:linear-gradient(90deg,var(--purple),#8b5cf6); width:0; transition:width .25s ease;}
+  .quiz-meta{display:flex; justify-content:space-between; font-size:13px; color:var(--muted); font-weight:700;}
+  .chips{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0;}
+  .chip{background:#fff; border:1px solid #d6c7ee; color:var(--purple); border-radius:20px; padding:5px 12px; font-size:12.5px; font-weight:700; cursor:pointer; transition:.12s;}
+  .chip:hover{background:#f3ecfb;}
+  .chip.active{background:var(--purple); color:#fff; border-color:var(--purple);}
+  .qtext{font-size:15px; font-weight:700; color:var(--navy); margin:12px 0 6px;}
+  .opt{display:block; width:100%; text-align:left; background:#fff; border:2px solid #e2e8f0; border-radius:10px; padding:11px 14px; font-size:14px; margin:8px 0; cursor:pointer; transition:.12s; color:var(--ink);}
+  .opt:hover:not(:disabled){border-color:var(--purple); background:#faf6ff;}
+  .opt.correct{background:#ecfdf5; border-color:var(--green); color:#065f46; font-weight:700;}
+  .opt.wrong{background:#fef2f2; border-color:var(--red); color:#991b1b; font-weight:700;}
+  .opt:disabled{cursor:default;}
+  .feedback{margin:10px 0; padding:11px 14px; border-radius:10px; font-size:13.5px; display:none;}
+  .feedback.show{display:block;}
+  .feedback.ok{background:#ecfdf5; border:1px solid #a7f3d0; color:#065f46;}
+  .feedback.no{background:#fef2f2; border:1px solid #fecaca; color:#991b1b;}
+  .feedback b{color:inherit;}
+  .quiz-actions{display:flex; gap:10px; margin-top:12px; flex-wrap:wrap;}
+  .btn{background:var(--purple); color:#fff; border:none; border-radius:8px; padding:10px 18px; font-size:14px; font-weight:700; cursor:pointer; transition:.12s;}
+  .btn:hover{background:#5a3490;}
+  .btn:disabled{background:#cbd5e1; cursor:default;}
+  .btn.ghost{background:#fff; color:var(--purple); border:2px solid var(--purple);}
+  .result{background:#fff; border-radius:12px; padding:18px; margin:14px 0; border:2px solid var(--green);}
+  .result h3{color:var(--green);}
+  .review-item{border-bottom:1px dashed #e2e8f0; padding:8px 0; font-size:13px;}
+  .review-item .rqq{font-weight:700; color:var(--navy);}
+  .review-item .rsts{font-weight:800;}
+  .ok-t{color:var(--green);} .no-t{color:var(--red);}
+
+  .footer{text-align:center; color:var(--muted); font-size:12px; margin-top:30px;}
+  @media print{
+    body{background:#fff; padding:0;}
+    .banner{margin:0; border-radius:0;}
+    .tabs{display:none;}
+    .wrap{box-shadow:none; max-width:none;}
+    .ans-body{display:block !important;}
+    .toggle{display:none;}
+  }
+</style>
+</head>
+<body data-page-node-id="TY5aihEZZjTTrdaztpH5jp">
+
+<div data-page-node-id="G1X4qHVtnbLeW28ch62uBk" class="banner">
+  <div data-page-node-id="yWNNOOCAu4Q2NdRZh4VTzb">
+    <h1 data-page-node-id="cyVAPUyK1JbVrxPEp092Jj"><!--pnid:tk4AEDSwveujb3fDPWrDRq-->IFYTM001 技术数学 · 吴昊峻 10月月考 学情分析与提升计划</h1>
+    <div data-page-node-id="uHIYOo6ISkWHK4pdvFLh4K" class="sub"><!--pnid:0dCZN6SQR8i0HqeaXFdbrj-->Monthly Test 1 · 26 October 2026 · 个人诊断报告（基于试卷、标准答案与本人答题卡）</div>
+    <div data-page-node-id="9FTqlSVLvSYeZf8pSUedMl">
+      <span data-page-node-id="JFoa31kmJtMXB5ThQztenA" class="tag"><!--pnid:0ytm7PLcWrOG6Yf8I0DQ4h-->NCUK 广州国际学习中心</span>
+      <span data-page-node-id="WW1NSs6uM3BoEVYqAsWiSb" class="tag"><!--pnid:l5lrqErG21ky2aVa1jDg5c-->错题诊断</span>
+      <span data-page-node-id="zl5sgp3bGDttyRSI6WPV42" class="tag"><!--pnid:igTlMmYhNu6GuW8Ei1dP2s-->英文练习</span>
+      <span data-page-node-id="c5Q6Teg9FoyuJoeYpV224o" class="tag"><!--pnid:q67CQpdkRNrvUr9FD6t4vW-->在线重做测验</span>
+    </div>
+  </div>
+</div>
+
+<div data-page-node-id="nTXF0PbNnsc2xwE0NMMGdE" class="wrap">
+
+  <!--pnid:kzvIsClgN9663udVGdJzhK--><!-- TABS -->
+  <div data-page-node-id="14Dp7cuhw5Aq7cDy6pZ35m" class="tabs" id="tabs">
+    <button data-page-node-id="neGrTV3D3fBh0BNZ8YSWJg" class="active" data-t="analysis"><!--pnid:5YvIHCbjkxJVyQ157KEI7B-->① 我的错题分析</button>
+    <button data-page-node-id="W3vN5a8gxQXUnzAtUKP5ql" data-t="knowledge"><!--pnid:exu64eY3E4KcjGoboSIwCN-->② 重点知识点</button>
+    <button data-page-node-id="TQ0yFXuSqrxf34GXSfRw4a" data-t="practice"><!--pnid:zBbMVvnvJE56VEz3hFI7uh-->③ 英文练习</button>
+    <button data-page-node-id="UNSHURk4T4VRJtlF6Egd9H" data-t="plan"><!--pnid:ckLchLkuMyScdNPkywxNMl-->④ 我的提升计划</button>
+    <button data-page-node-id="26dr9osurPuP4BXcUjFUuY" data-t="quiz"><!--pnid:uwqBaVzyAKEwdAaqQCA3wC-->⑤ 错题重做测验</button>
+  </div>
+
+
+  <!--pnid:QAs10uZVT7CiMqUQizPR5i--><!-- ===================== 2. ANALYSIS ===================== -->
+  <section data-page-node-id="DNmAwxEso9Kdg4rwBeku5h" id="analysis">
+    <h2 data-page-node-id="s1SFfB0Jt94NYZ0ndvUtmZ"><!--pnid:kaQlttfrFFIqdkYuMurAYq-->① 我的错题分析</h2>
+    <p data-page-node-id="h4kf8VIIdyVxSG3mMGPfG1" class="subtitle"><!--pnid:6SoVE9CHzWwTibi1h1C4Pr-->对比官方标准答案，定位 吴昊峻 的错误点与错误类型，聚焦错因与提升路径</p>
+    <div data-page-node-id="ojYJK7fKsTPscklRE2Fecf" class="stu">
+      <h3 data-page-node-id="iKTBjZT2Ope7DANjbxnUu5"><!--pnid:Kaij3soZ0SDb3jPwmhfhzm-->吴昊峻 <span data-page-node-id="XRR3yykopxMXX3eapqyY6k" class="pill red"><!--pnid:mM4NVAzwlYn8YS1b94UXpf-->错题诊断</span></h3>
+      <div data-page-node-id="FWes47YKbi2wCWisWxvZrJ" class="tags"><span data-page-node-id="rTXN08jZErXQIAVDjeYDqi" class="tagx p"><!--pnid:QvXegg5QZ96fJ3keXgATXR-->Section A 全部正确（优势）</span><span data-page-node-id="nPF8NnrOVVk2GG3UjuGxmw" class="tagx "><!--pnid:Xg7ZvOmnB7U2KT7Ry5RZIi-->图像变换（整题空白）</span><span data-page-node-id="a41dUrAEB6JroLwZfvl91L" class="tagx "><!--pnid:ObWcDO4WeZX0FmMPVWNJ2u-->含参圆（整题空白）</span><span data-page-node-id="D3YVXlHqNwKmPdozd7UIyL" class="tagx "><!--pnid:CJ2dYvDffr3uEkBT2JHTvk-->多步推理链中断</span><span data-page-node-id="XUiHKXHic3OMljzy04z3H3" class="tagx m"><!--pnid:OULsEQSeqmlU1F9nJSYsbM-->反函数（带定义域）</span><span data-page-node-id="19CA6OhiSUv6zUHvXST4SN" class="tagx m"><!--pnid:7Og4NMr8wXybAq8aGTHzF6-->结果核验 / 符号</span></div>
+      <div data-page-node-id="HShxupKHau9Tk61Ok2oNt6" class="tbl-scroll"><table data-page-node-id="yGr2166ydV6rxsYV26lCHs"><tr data-page-node-id="KNekpiwkPWs2tQd2ZpMRUx"><th data-page-node-id="MJ6cGXQlG98LFMAltNwSJe"><!--pnid:hZVNia3TPwsK4gKZ2WDuAd-->题号</th><th data-page-node-id="Q8bfJe4neecJEJiThoMSjt"><!--pnid:7LxAF6GIrJE76qxriluaVg-->作答情况 / 答案</th><th data-page-node-id="T00cKd7ZcSb1IYS5og5mbg"><!--pnid:fjU4BSHosejcdpi5rpO2w2-->正确答案</th><th data-page-node-id="xFdydV9oFFFb4Q6MRbtFNk"><!--pnid:2w546RNEvjnkna5PN7u30d-->错误原因 / 类型</th></tr><tr data-page-node-id="NqAV7EXG7VM6Di3htcCBh3"><td data-page-node-id="bWjN9yHixzzAY6Ms1qsm2j"><!--pnid:Oh5lNHbhdgSjc7K1Ajd53q-->Section A（Q1–Q10）</td><td data-page-node-id="2dJHU07G2hR62NOQM3VTY6"><!--pnid:FU2hVNSw8eFDDIH1UCLjbS-->全部正确</td><td data-page-node-id="X60tLiYijr2ixMeRX9POVS"><!--pnid:iF9ZcSn7KMc7yOf8LtmdTV-->C B A B A C B A B C</td><td data-page-node-id="zsFqvszKPb2N164Lu1DKYR"><!--pnid:ndlWJnGC9oiVL9XSoUc1BA-->概念辨析扎实：因式定理、余数定理、判别式、值域、反射、反函数均已掌握。这是你最大的优势，必须保温。</td></tr><tr data-page-node-id="Iy3mOnVkPxgXWNNcfLoFYs"><td data-page-node-id="RwSTZn4EJPt6MeLOkZgVZb"><!--pnid:GeEz9wN4wYnmC3iq3nw8Fw-->Q11(a) 求交点 P</td><td data-page-node-id="xPdcgxLpQGlaEchfhIDsiI"><!--pnid:xFTnw2rbwqX2GNGPt8OC0a-->P(12/5, −19/5)</td><td data-page-node-id="V98fASNdNyU0QAxun5R3kx"><!--pnid:QQ8hPp7T9h7zFmkPa7IsXH-->P(12/5, −19/5)</td><td data-page-node-id="rnL63fvGGCpoBLmJ7lHaU7"><!--pnid:x1jEXX5LVpIt76KY9qdFME-->联立消元与回代规范，保持这一书写方式。</td></tr><tr data-page-node-id="PSQCw4mvH3piDGO3Akahg4"><td data-page-node-id="4ID7R5qK19A670DhSkbAdt"><!--pnid:qx1rlePZchs6TceoIezuqM-->Q11(b) 垂线方程</td><td data-page-node-id="vcUZg9Ek95V8igSIXPvwnV"><!--pnid:tvxHDRXexELLYaCn9CQ0TZ-->y−2 = −3/5(x−4)，得 a=3/5, b=1, c=−22/5</td><td data-page-node-id="TuNMj75w7Px2hsj0DA5DLd"><!--pnid:RYrrvT5tBtRr9DEGNOpNyW-->5x − 3y − 14 = 0（a=5, b=−3, c=−14，整数）</td><td data-page-node-id="C5P2f0BjBBqNprGRnajf8o"><!--pnid:iMtyDGoO8nOlxYX9pyEX30-->已算出垂线斜率 5/3，却在点斜式里代回原直线斜率 −3/5；且未化成题目要求的整数系数一般式 ax+by+c=0。属「会算、用错」的执行失误。</td></tr><tr data-page-node-id="hfW5q3umD5nSBRoTN9rQ8I"><td data-page-node-id="uskSMuDD3XXn6XgwRJNCHp"><!--pnid:4eueaqFe4H4VqBXeHPl4Ak-->Q12 含参圆（整题）</td><td data-page-node-id="D1lSFPXLD60Mxd1vciq2Hg"><!--pnid:oRogmkMs7h6XXEIjQ7FLB3-->(x−2c)(y+c)=5c²，其后放弃</td><td data-page-node-id="89ZYusHeZWkVf4Zfxg20PF"><!--pnid:trqgVJ9O1oUqtwtaMAWc6p-->(a) c=2；(b) M(10, −10)</td><td data-page-node-id="j0muNabwfcQzJ31HZD0wAf"><!--pnid:fy0q6LegpfBZPfcfRrz4Yb-->圆标准方程记成乘积、半径写成 5c² 而非 (5c)²=25c²；含参建模未起步即放弃，整题未完成。</td></tr><tr data-page-node-id="2pxBt3lTt1PPuJDsyqiZ0n"><td data-page-node-id="DSpnQSuXLVsafmyKUT8MSj"><!--pnid:W1JRhpvCAYqavOLHDqub1y-->Q13(b)(c) 不等式</td><td data-page-node-id="e8Pv56yFg3dPJVSoqsD6Xb"><!--pnid:1l30nmm5wQP09bUOoPVYrs-->1/2 ≤ x ≤ 3；整数解只写 x=1</td><td data-page-node-id="XcC1hMlPo2lnL25cNhlx4F"><!--pnid:aBBwDEoWAyF18Kz5DyPD3O-->−1/2 ≤ x ≤ 3；整数解 0, 1, 2, 3</td><td data-page-node-id="KuPPUmKnJAoxMPxqql7lWi"><!--pnid:YtVgPanY6WU0bqRaGi9QPZ-->(2x+1)(x−3)=0 的根应为 −1/2 与 3，负号丢失导致区间左端错；(c) 整数解未完整列举。</td></tr><tr data-page-node-id="3TKxM0sKdkdHjViHhALYm4"><td data-page-node-id="cng2LFk5dFxhODhqaWESwy"><!--pnid:cYJnifgS9lXdvwFTkdWnoH-->Q14(b)(c) 因式/余数定理</td><td data-page-node-id="ZoWy8CHHQ2xa53Xbjx4SsO"><!--pnid:ngM2TZO1zrcVO0mnfrip7y-->(a) 2a+b=−5 正确；(b)(c) 留白</td><td data-page-node-id="RsMO1klODxnuwqYwJEf7zB"><!--pnid:1x7ijDPGeXtQHeIhwThabZ-->(b) f(−1)=−12 ⇒ a−b=−4；(c) a=−3, b=1，f(x)=(x−2)(2x²+x+3)</td><td data-page-node-id="BTQbBvOycEO0CwFC32PAcM"><!--pnid:92LeM7hm1bdWfXWkKht6PW-->不会用余数定理建立第二个方程并联立求 a、b，多步链条在第一步后中断，后半段停笔。</td></tr><tr data-page-node-id="d7qW55L4CVcRfvdblU009j"><td data-page-node-id="Tk26Vajw3dNRPLUdhogkIp"><!--pnid:QYR2M9J7Xg3DilkOawiZiU-->Q15(b)(c) 分解与作图</td><td data-page-node-id="IDcN10nozh2f7oWpWvy2U5"><!--pnid:VkaFVHD0OICbw66OXRgGOW-->(b) 分解思路混乱，根算错；(c) 只写 (0,12)</td><td data-page-node-id="kXcgdo9xhOEZK9dAu3wKVs"><!--pnid:phdnlzPe54uGdDOA2B47Xr-->g(x)=(x−3)(x−2)(x+2)，根 −2, 2, 3；图过 (−2,0)(2,0)(3,0)(0,12)</td><td data-page-node-id="Al33FsbYVNQtPDN7xCNQL3"><!--pnid:qK7Pn45AhsJj1OC2xBCkzq-->未用分组分解 x²(x−3)−4(x−3) 或长除法降次；(c) 作图题只给 y 轴截距，未画曲线、未标三个 x 轴交点。</td></tr><tr data-page-node-id="t6xWKt4rll2H05pgxH4dkH"><td data-page-node-id="4TPwmLfZl06R18vAXpM6q6"><!--pnid:mwwx4YUb9a1y2YlXgE0y3X-->Q16(a)(b)(d) 函数</td><td data-page-node-id="O5GQ6ZUop88NWekQrXgZum"><!--pnid:ijsf84IWFAJdbncQh3etUV-->(a) 配平方对但漏写值域；(b) f⁻¹ 留白；(d) 得 x=1, 3</td><td data-page-node-id="DlyVYayfljfdQw7r7h4R2b"><!--pnid:NRPLjaiB77fOQmX81MdRfp-->值域 f(x)≥1；f⁻¹(x)=3+√(x−1)（定义域 x≥1）；(d) 仅 x=3</td><td data-page-node-id="gWcOIpKlx9J7zmCO4VUMpA"><!--pnid:KeAPInxyn8xfdRDHY1aXOS-->不会求带定义域 x≥3 限制的反函数（须取正平方根并写明定义域）；(d) 未用 g(x)≥3 即 x≥2 舍去 x=1；(a) 漏写值域。</td></tr><tr data-page-node-id="WdZ5IKLkXQjdgN1FliXdgZ"><td data-page-node-id="kKlbsJcJGM4tM0xD2hVIDx"><!--pnid:zxnrJv6mG4SufV9NVxuRgB-->Q17 图像变换</td><td data-page-node-id="nKezXLXv6swMcRwDqWfJdz"><!--pnid:wJvtuY3VD2HPRMJtx0EZO7-->整题空白</td><td data-page-node-id="5rhsybjTP4a0De95L9c0Ak"><!--pnid:E6fyXV5rfNCB3ZoIu1a4oO-->(a) g(x)=(x−2)²+3，最低点 (2,3)；(b) h(x)=−(x−2)²−3；(c) k(x)=−2(x−2)²−6，恒负不穿 x 轴；(d) 先纵向拉伸 3 倍再右移 2、上移 7，最低点 (2,7)</td><td data-page-node-id="erESpuGhrrxBhv4BGcrKdL"><!--pnid:8psPpTQJjQZc1198FbQqmt-->整题未动笔，是本次最大薄弱点；需排查时间分配或专题完全未复习。</td></tr></table></div>
+      <div data-page-node-id="TOQX4xgAubtKOSO9Q13ysA" class="danger"><b data-page-node-id="Ck49dqmi3YC6crYpFTk3Wq"><!--pnid:VV6fhONK8nVkh4CfKxw1AC-->最薄弱：</b><!--pnid:AJFrJKAksztJWU5BntO72u-->Q17 图像变换（整题空白）与 Q12 含参圆（整题空白）两题整题空白；Q14 / Q15 / Q16 又普遍「第一步正确、后半段停笔」。核心不是概念缺陷（Section A 全部正确已证明概念扎实），而是<b data-page-node-id="ZyDERAgiemGBYTskocUs6Q"><!--pnid:NDcH20FprvObguGVMKoMZ9-->多步推理链写不完 + 放弃难题</b><!--pnid:Sl9n3VERKuxfLASavk0YXt-->。</div>
+    </div>
+    <h3 data-page-node-id="tyXxeE1Sg2npkWyHhbVMSO"><!--pnid:6oZB0FY3hZFIGKs2GYWq9r-->需重点补习的知识点（针对你）</h3>
+    <div data-page-node-id="uldreqncK460880ylxSTGQ" class="note"><!--pnid:2cup7JYwqfqb05pTlPcvrF-->本页重点补习顺序：① 图像变换（整题空白，性价比最高）→ ② 含参圆标准方程与代入建模 → ③ 因式 / 余数定理联立求 a、b 的完整链条 → ④ 带定义域的反函数与复合方程舍根 → ⑤ 三次式分组分解与草图 → ⑥ 交卷前结果核验（符号 / 整数系数 / 定义域）。</div>
+  </section>
+
+  <!--pnid:Mnow2f5mBE1w7Nv6LvGCe8--><!-- ===================== 3. KNOWLEDGE ===================== -->
+  <section data-page-node-id="U8Te7wWoOAvHccRq5QxEhK" id="knowledge" style="display:none">
+    <h2 data-page-node-id="lF3e4aYt3PXcOS4XSl813b"><!--pnid:fncBb5iZeMFK1lVNAV6ACF-->② 需重点补习的知识点</h2>
+    <p data-page-node-id="86luRg4Xm1VfF8quH1zuK5" class="subtitle"><!--pnid:uyoFFdZ5b22k1qgBzmuVSH-->按优先级排列，对应上述个人诊断中的薄弱点</p>
+
+    <div data-page-node-id="Kugfc2JB0WvKu1pOzvMMaP" class="kp"><h4 data-page-node-id="QIV7pNr7Ii0RmfjdctfbHY"><!--pnid:G1aEeYHpRfaSSkzLYzqulk-->1. 图像变换 Graph Transformations <span data-page-node-id="t8h7CrSuCctDVqseazZMG5" class="lv lv1"><!--pnid:NmjdHYZAQrYOpLp6Mk7xHf-->最高优先</span></h4>
+      <ul data-page-node-id="XvzBJayb2ReZPub4p8R9e4">
+        <li data-page-node-id="AYtn06SIeFMV2yWCeGczw9"><b data-page-node-id="fMxvwcFJbFctw3dbrwYzVs"><!--pnid:8gDewAFD70a6I92aeBjet3-->平移：</b><!--pnid:UMifl6rtjxtx8TdBjOvtNX-->右移 h → x−h；左移 h → x+h；上移 k → +k；下移 k → −k。例如 f(x)=x² 右 2 上 3 ⇒ y=(x−2)²+3，最低点 (2,3)。</li>
+        <li data-page-node-id="q305kJ63zivDp7EGTfBVfd"><b data-page-node-id="0cPFECOrNnsOzfqPhMl1j5"><!--pnid:RPnQhvjZaYBeHgSlnUQQFy-->反射：</b><!--pnid:0U8Szu5poXZSBLnkWCT9nx-->关于 x 轴 ⇒ y=−f(x)；关于 y 轴 ⇒ y=f(−x)。</li>
+        <li data-page-node-id="nfnEKtPHiolg5s7QCb2XkV"><b data-page-node-id="UX1jJSoCzr34ks4ba06IIZ"><!--pnid:62V0xX4pmYb53Yw6R6cuwH-->拉伸：</b><!--pnid:RTRp8e1mO5wZttaHTU3kke-->沿 y 轴 scale factor a ⇒ y=a·f(x)（纵向整体缩放）。</li>
+        <li data-page-node-id="XgEqsAgpVGpamsejRYfC6E"><b data-page-node-id="sVXZnYvhhUwOwVGMSyK3oB"><!--pnid:evElojRqwa1UhC0MPzaeov-->两步序列：</b><!--pnid:awzDlsOwCzSwDWYS4wesTQ-->顺序要与参数配套；先拉伸后平移与先平移后拉伸的向量不同，须自查最终式。</li>
+      </ul>
+    </div>
+
+    <div data-page-node-id="Kw7TnzaFr1MK63HSVEbdmH" class="kp"><h4 data-page-node-id="WaF5nOpFyWMxHigzAZAcov"><!--pnid:rjww7pMiw7PXsllexd2Cc2-->2. 多项式 · 因式定理与余数定理 <span data-page-node-id="Y7lQOeit1IyWqz21yjdQuX" class="lv lv1"><!--pnid:GP4ZK1eeVC0hHmhQdBjWSV-->最高优先</span></h4>
+      <ul data-page-node-id="EgNlPNF1lw69grEk8ep0w0">
+        <li data-page-node-id="wdHYFZmLOr5vwiynpEavCk"><b data-page-node-id="9o9fexAeLb1d22OPMj7pNy"><!--pnid:pHSEWn0zVRtUkTBkq1qx4d-->因式定理：</b><!--pnid:OWUsB5eGAiXc8rad4JP03l-->(x−a) 是 f(x) 的因式 ⇔ f(a)=0。</li>
+        <li data-page-node-id="KvYmR6s7DxhnfEEoIwcGxy"><b data-page-node-id="Z38qGum8f5qUAsi1aREk0p"><!--pnid:TTHUJSTryUC5L1EWDU58gg-->余数定理：</b><!--pnid:AXD8nys2Asi7NPiNCnkgNs-->f(x) 除以 (x−a) 的余数为 f(a)。</li>
+        <li data-page-node-id="AXKat1mwvCvQswOJefkxjQ"><b data-page-node-id="C1i4mXYO2iWkcJMVPZuZ43"><!--pnid:F4hftCWApY7MLS3VBIkIZi-->降次分解：</b><!--pnid:CPjn01wiJmvQGLWmKScww8-->用除法 / 综合除法 / 分组提取一次因式，再对二次因子继续分解；判别式 &lt;0 时实数范围内不可再分。</li>
+      </ul>
+    </div>
+
+    <div data-page-node-id="1gHISvVUP4e1cMkt4xBHGf" class="kp p2"><h4 data-page-node-id="wPMGExP8WLY6XWTzPuA1B3"><!--pnid:JSScbT3dz0XsAzE1zNYVGp-->3. 反函数 Inverse Function <span data-page-node-id="e3aQ8QfAohBo13hY9m9DND" class="lv lv2"><!--pnid:t2K3irBmBs8iEe9VWunqlA-->高优先</span></h4>
+      <ul data-page-node-id="45DCLGMNovyoCDtEpj3uJX">
+        <li data-page-node-id="oisoxxGqIgLxuqt1D6fTFV"><b data-page-node-id="RXT9GHfZbycbZdTrnEAjfF"><!--pnid:3WR6WID1EXOf8jmHJhcvaG-->反函数 ≠ 倒数：</b><!--pnid:iP5B29SmbEAW1fi5ldDhsA-->f⁻¹(x) 是“逆运算”，不是 1/f(x)！</li>
+        <li data-page-node-id="UzWwJHus5eoFjzdc2Tulc2"><b data-page-node-id="hy00YefGf2RnZTxhG6aQ2H"><!--pnid:BCbP8fL8LfzTKtKRDMxDgf-->求法：</b><!--pnid:ypFY0oXbSXAbuijyqNT6W6-->令 y=f(x) → 互换 x、y → 解出 y → 写出 f⁻¹(x)。</li>
+        <li data-page-node-id="NFButjCKqJLwswDpUsX1AK"><b data-page-node-id="7TupN1Ms1yKVc8ObfB1Mus"><!--pnid:iIsYzUu7Qj90dxlvVVUmtI-->定义域：</b><!--pnid:cDcxrbnAaB9d48uceDfON4-->反函数的定义域 = 原函数的值域；单调（或限定定义域使其一一对应）才能存在反函数。</li>
+      </ul>
+    </div>
+
+    <div data-page-node-id="YOpOxD5YZWfrMBk3Dn9kKl" class="kp p2"><h4 data-page-node-id="4ZivIWBTX7bxy64YjaTBKx"><!--pnid:Y1dDpwryLE2xcFDqQBeIE3-->4. 含参数的圆 Circle with Parameter <span data-page-node-id="TGaQKlcRcEcGMnvks7xED6" class="lv lv2"><!--pnid:ceRwhrBtYjgIc0ZtZ57IIv-->高优先</span></h4>
+      <ul data-page-node-id="Wb80ugkq44N0H5RbL5ZKSn">
+        <li data-page-node-id="PJuNUSWrRC3Y9opqgz20L5"><!--pnid:B3EheX6y8mLSgNMUAVBnCd-->标准方程 (x−a)²+(y−b)²=r²，圆心 (a,b)、半径 r（注意是 r 不是 r²）。</li>
+        <li data-page-node-id="ZTEWFR9ZFrx3LaCnDFDy3f"><!--pnid:gDRDvsyUhtGdDPYptEH0Zs-->圆上点到圆心距离 = 半径；直径中点 = 圆心；列方程后按要求（如 c&gt;0）取舍根。</li>
+      </ul>
+    </div>
+
+    <div data-page-node-id="zYI1CmPpGgFeKrVOAVWhOW" class="kp p3"><h4 data-page-node-id="iPvE1ctEQz9ShPuRAD6Nd4"><!--pnid:f8KWCYTKpvaffXAXAZFQ13-->5. 二次函数值域与配平方 Completing the Square <span data-page-node-id="d1GgrZDT9NBA9CkyJntQ1d" class="lv lv3"><!--pnid:MqPanTftIKZwBGKMyEnZOL-->中优先</span></h4>
+      <ul data-page-node-id="1tmAByNDBHfDOpvSn0xxgK">
+        <li data-page-node-id="cEyrn1XQjYaIJMsKm841zL"><!--pnid:8kIJlU4lBZ38LjKpyVpxJJ-->x²≥0，故 x²−2≥−2；配平方 (x−p)²+q 直接给出最值与值域（注意定义域限制）。</li>
+      </ul>
+    </div>
+
+    <div data-page-node-id="50X3nOMHshLlPNDqX6IZSz" class="kp p3"><h4 data-page-node-id="ERRE6Max3Slp6Ekt64N4ck"><!--pnid:mlyRWqOqJzQsAC9gVNF0Mt-->6. 判别式与二次不等式 <span data-page-node-id="anIjpcObEJiOl0AjMm3xXC" class="lv lv3"><!--pnid:t4GnY3pNEkqzchgdrpCe6j-->中优先</span></h4>
+      <ul data-page-node-id="kgpTKtiYQvyLeZXkhePpu0">
+        <li data-page-node-id="mHWMZpmxw0wSLpnIO4by0K"><!--pnid:h8OpVXoQC6hZ9fooeMBeaJ-->无实根 ⇔ Δ&lt;0；恰一根 ⇔ Δ=0（且须为二次方程，a≠0）。</li>
+        <li data-page-node-id="56TRFDZYjWADPJEePMCOGS"><!--pnid:fIgpaUmWQZ4j3RkjMauAMj-->开口向上时不等式 ≤0 取两根之间闭区间；整数解在闭区间内枚举。</li>
+      </ul>
+    </div>
+
+    <div data-page-node-id="x8ZXWfbClhnN1ixKUgxxGW" class="kp p4"><h4 data-page-node-id="Gg0poDO6XCn05E1I5tWEDJ"><!--pnid:AdPHwSP2GAhW8VRS0ShssC-->7. 直线与垂直 / 反射规则 / 复合函数 <span data-page-node-id="b7EpJ6cFMIggTui7L9zYID" class="lv lv4"><!--pnid:FpWZorswQGt4izFrlcMfg0-->巩固</span></h4>
+      <ul data-page-node-id="UBz5ScAVtQCCnjeswHBN3C">
+        <li data-page-node-id="aa71k53b6HSwzv8IIzOsus"><!--pnid:Frryg6AcmD2Lt4da3uSytS-->垂线斜率互为负倒数；联立求交点须逐步消元回代。</li>
+        <li data-page-node-id="Ff5eGX1oCogAW9HuxlB5w1"><!--pnid:zUopJrBw0jvpdLi3JMFiif-->复合函数 fg(x)=f(g(x))，定义域由“内层函数值落在外层定义域内”决定，解方程后须舍去超出定义域的根。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!--pnid:oins9QePYMsvA7CSuKbqAh--><!-- ===================== 4. PRACTICE ===================== -->
+  <section data-page-node-id="eQhMl4o4ke00UWECA7IaG1" id="practice" style="display:none">
+    <h2 data-page-node-id="tCL7iO0sZTT8Bla75jdOXn"><!--pnid:zUfzkjsK0SCrb7JNqSCsML-->③ 英文测试题（填空自测）</h2>
+    <p data-page-node-id="7VStIVL5rCVUmQ0Ll6czki" class="subtitle"><!--pnid:LxnndVrQjjzeKvXzLNz1mg-->每题先给出英文原题（含填空）。请先自己把英文翻译成中文并尝试作答，完成后再点击“显示中文意思 · 答案与解析”核对标准答案与详细解析。</p>
+    <div data-page-node-id="4IYGfb2gJfQgRwFgdupuhH" class="note"><!--pnid:jqmUYdESQxJtaoHTMT3gwd-->题目覆盖上述重点薄弱专题；解析中的关键步骤用 <b data-page-node-id="SFX1Wfc0dRgDRqbx5rRarC"><!--pnid:f55GTtStQUQBn8afib3d9L-->加粗</b><!--pnid:XdsIoeLwwKbNkZ1wgqA2WZ--> 标出，便于对照自己的错误点。</div>
+
+    <div data-page-node-id="AqzjeoAItP0y9tsGfEqCNP" id="practiceList"></div>
+  </section>
+
+  <!--pnid:fudRMFAUPQRyvyf0QmbbzL--><!-- ===================== 5. PLAN ===================== -->
+  <section data-page-node-id="UlivjWgZMoFG7IgnBkNBmk" id="plan" style="display:none">
+    <h2 data-page-node-id="RChjw3RrTLkb3k1EZHXqbA"><!--pnid:ltL0gVo0cg1pRI3KZfFjZZ-->④ 我的 11月提升计划</h2>
+    <p data-page-node-id="IlQ9vPM463VM04Re1l7D0J" class="subtitle"><!--pnid:VzbjLypDvgXybTirDwQFFs-->吴昊峻 专属 · 4 周递进式复习 + 每日错题重做 + 限时模拟</p>
+    <div data-page-node-id="gPn4BVLXw3NlmA1jFCyxFE" class="week"><div data-page-node-id="EV2Tz7q51y4cOYIekUnalG" class="wk"><!--pnid:rtjWomKDe6KTdIRvM08pKI-->第 1 周（11月初）· 图像变换从零补齐 + 消灭「整题空白」</div><ul data-page-node-id="wKa3SFz1xGkA8mKJRVyq20"><li data-page-node-id="2cviCarQqOVkyP5HAww6V7"><!--pnid:DBjKAJTfHYYYAri3qlI0vI-->把 Q17 四问逐问重做：右移 2 上移 3 ⇒ x−2 与 +3；关于 x 轴反射 ⇒ 整体变号；沿 y 轴拉伸 2 倍 ⇒ 乘 2；复合变换先拉伸后平移。每问必须写出方程 + 最低点 / 是否穿 x 轴的理由。</li><li data-page-node-id="iQmmE5RmVOpJhHy82HPqci"><!--pnid:MzPLKcPxFSNUrSVeffxNyt-->订立硬规则：任何大题至少写出「列出已知 → 写标准式 → 代入」前三步，绝不留整题空白（本次有大量题目直接留白）。</li><li data-page-node-id="WeKoNMAjoXIdvBPnJb97cn"><!--pnid:tc0hp04I0b6HTQ3IcvaxOn-->每天 30 分钟用 f(x)=x² 画图验证四种变换；完成本页【图像变换】标签下全部题目。</li></ul></div><div data-page-node-id="D8bD1ISsKau89B4N5r6xmI" class="week"><div data-page-node-id="rNSQQNR3IiP4BQZAvpKXuX" class="wk"><!--pnid:1rg0gNHr096UXX0Irp7We2-->第 2 周 · 含参圆 + 直线与垂直（Q11 / Q12 重做）</div><ul data-page-node-id="NHbxdc5y2IudhNAzgBrwbs"><li data-page-node-id="cfe0iTi4ZQQKFsS3ahQZfM"><!--pnid:mXoYVr67A3N1YIKJLdyecQ-->圆：默写 (x−a)²+(y−b)²=r²；把圆心 (2c,−c)、半径 5c、点 (−2,3c) 代入得 (2+2c)²+(4c)²=25c²，解出 c=2（c>0）；再用中点公式求直径另一端 M=(10,−10)。</li><li data-page-node-id="ICdryzmilH1t3yJ2gFOe4Q"><!--pnid:diYtpA8f0gwXLY0oyyxF1G-->直线：垂线斜率为负倒数 5/3；点斜式后必须化为整数系数一般式 ax+by+c=0，并回代点 (4,2) 验算。</li><li data-page-node-id="dCkUxftQ4jzUuy2pVSHm1I"><!--pnid:3V062WxLo7jDS5l7tQEsPa-->任务：完成【圆】【直线】标签下全部题目；把 Q11(b)、Q12 限时各重做一遍并写满全步骤。</li></ul></div><div data-page-node-id="1gTrIkaOMPz2fMlprdaYJM" class="week"><div data-page-node-id="sitZOmSK6dvlb5APsy4wJn" class="wk"><!--pnid:A9gPSjLI9ZH8iHsEM6vtfG-->第 3 周 · 多项式完整链条 + 带定义域的反函数</div><ul data-page-node-id="mkMfT3GZ9rDPF7wwEaj51P"><li data-page-node-id="2tqi29f5pwWmGsRp1gbrfs"><!--pnid:ySL3huSge73iBkacNvHAMx-->固定五步链：因式定理 f(2)=0 建一式 → 余数定理 f(−1)=−12 建二式 → 联立解 a、b → 长除 / 分组分解降次 → 判别式判断能否再分。以 Q14、Q15 为模板练到能独立写到底。</li><li data-page-node-id="Bz2Qv446ogQERNP2jOgkMI"><!--pnid:5xViLw6BRWjzUdUBRn1U9x-->反函数：f(x)=(x−3)²+1（x≥3）⇒ f⁻¹(x)=3+√(x−1)，定义域 = 原函数值域 x≥1；解 fg(x)=5 后必须用 g(x)≥3 舍去 x=1。</li><li data-page-node-id="gEI2litnErxnOz8SwXcsTZ"><!--pnid:bN0gqVPlH3npFLzCoSLcUy-->作图题规范：先求全部 x 轴交点与 y 轴截距，再画曲线、标坐标，不能只写一个 (0,12)。</li><li data-page-node-id="Y2nvPYcQBLJJsgou3ULFZh"><!--pnid:OclKPOayScr75H7Ycwful3-->任务：完成【多项式】【反函数】【复合函数】【值域】标签下全部题目。</li></ul></div><div data-page-node-id="Q6FkpJEEHjq40HUEO8FWm4" class="week"><div data-page-node-id="aKD9nvPy6jyCmIjyVI03lL" class="wk"><!--pnid:T0HObymlnFEAAPBBYRhLk9-->第 4 周（月考前）· 限时整套模拟 + 结果核验清单</div><ul data-page-node-id="NHMtVW0fFNqYLhGkUNDxi4"><li data-page-node-id="4lvhbEl5tDBvozZZD7Sjm7"><!--pnid:lyqDSWicIEoLJhdl16WQxR-->限时 60 分钟完成一整套（Section A + Section B），重点检查是否仍有整题空白；目标：完成率 100%、Section B 大题完成度与正确率明显提升。</li><li data-page-node-id="mC2OKnhNDC5IwESaXJ01Gu"><!--pnid:vQbnC4duPwALTDF6iYHvC5-->建立交卷前核验清单：① 根与区间的负号 ② 一般式是否整数系数 ③ 定义域限制是否舍根 ④ 值域 / 最低点是否漏写 ⑤ 作图是否标全交点。</li><li data-page-node-id="NAgyaKLBn6Z4aFfxoQmPK4"><!--pnid:56w5EJiKwHYwsLDbjOZWsv-->用本页测验模块做全标签重做，目标正确率 ≥90%；每天 10 道选择题保温，守住 Section A 的优势。</li></ul></div>
+    <h3 data-page-node-id="kOd2FoQXKbCD6EQXCtZsQw"><!--pnid:0WKanEtGIP96BJ2ZwYueC3-->你的专属行动建议</h3>
+    <div data-page-node-id="zNAILvACCTW4UyGspAUnKn" class="stu">
+      <h3 data-page-node-id="K5DEE3zuBP358qG4J4rlCf"><!--pnid:tPGvMDSdillZwYEuE74tCr-->吴昊峻 · 短板与动作</h3>
+      <p data-page-node-id="TJvgrkhQDn0qmwBpsaUubi"><b data-page-node-id="N1cFh5cv69tgXGEXD02mvQ"><!--pnid:KAhSLucX7ujuLxdK8ZvZ2C-->当前短板：</b><!--pnid:NBbxqVLn264rkJhtrxRv51-->Section A 概念扎实但 Section B 大题完成度不足；图像变换、含参圆整题空白；多步推理链中断；反函数（定义域）、结果核验（符号 / 整数系数 / 舍根）。</p>
+      <p data-page-node-id="dZfrdNoEgiqA26KWIFDW9c"><b data-page-node-id="xNeA3a32OTVzhCtJR26wmA"><!--pnid:vdGXtoS97W0zq8whPlbKvo-->11月重点动作：</b><!--pnid:UsIFrw8iIBwGYxk4DL1tPs-->① 用「绝不整题留白」优先补齐 Q17、Q12 两道整题空白；② 用固定五步模板把 Q11 / Q14 / Q15 / Q16 的大题写到底；③ 补齐带定义域的反函数与复合方程舍根；④ 建立交卷前核验清单；⑤ 每天 10 题选择题保温，守住 Section A 优势。</p>
+    </div>
+    <div data-page-node-id="3PM0OEhHsAWMuOUmEq2pZe" class="tip"><!--pnid:VWU5SOy2OW70mhjo5MgusQ-->通用策略：每天用本页“错题重做测验”模块做 10–15 分钟即时反馈练习；建立错题本，按“错误类型”而非“题号”归类（如『反函数＝倒数』『抄错坐标』『未用因式定理』）。</div>
+  </section>
+
+  <!--pnid:19FPiIonfPfJNSj5qZMy5B--><!-- ===================== 6. QUIZ ===================== -->
+  <section data-page-node-id="lMqvVxoHaUEexR4SJsPyAF" id="quiz" style="display:none">
+    <h2 data-page-node-id="94ST9sUGTXzkuupbEmD8uq"><!--pnid:E8jgnLgSrAbyhGtyDwbqKd-->⑤ 错题在线重做测验</h2>
+    <p data-page-node-id="l1h8MxmFKsEEho259hzs8s" class="subtitle"><!--pnid:JXeBYY1FpmmCWp20fW0Yh3-->交互答题 · 即时反馈 · 按薄弱专题筛选重做。点击选项即出对错与解析，答完生成答题回顾。</p>
+
+    <div data-page-node-id="DlJIwzmFef7YU34plbpkWD" class="quiz-box">
+      <div data-page-node-id="PFQgMtqfA8Sub7Pc1MRsBt" class="chips" id="quizChips"></div>
+      <div data-page-node-id="cSkG5KCZkgnrjJP2f7z5dr" class="quiz-bar"><div data-page-node-id="QZuOKzTxw3M3yMfT4Hrxrb" id="quizBarFill"></div></div>
+      <div data-page-node-id="xGmNWHqB6uqSlDCve9eULs" class="quiz-meta"><span data-page-node-id="AisujnV0YkTgsyYz5hEIaM" id="quizProg"><!--pnid:nXvJYxX1MVXMGbrYLV6Z1e-->第 1 / 1 题</span><span data-page-node-id="mGeEgjhKa87MTSmN6az8Fm" id="quizScore"><!--pnid:6Jc9hKn17fx4CYfEdxiNAN-->答对 0 题</span></div>
+
+      <div data-page-node-id="Kfhr63Iuxhy8D7Q0nVJz8v" id="quizCard">
+        <div data-page-node-id="VvH4iPQQ2nM74kt3QFclvq" class="qtext" id="quizQ"></div>
+        <div data-page-node-id="eo9UuGnH7tBOFELPM651HO" id="quizOpts"></div>
+        <div data-page-node-id="1hRQw7v7WTYT98Ty0b91zW" class="feedback" id="quizFb"></div>
+        <div data-page-node-id="0GnjhJkfH0YLcNMuUsaHXH" class="quiz-actions">
+          <button data-page-node-id="VaJmRNTgkI3GVDcs23UMoi" class="btn" disabled id="quizNext"><!--pnid:fuApPrOsenN5pnVZg6RJQR-->下一题 →</button>
+          <button data-page-node-id="j4Snu9JpTl9mTHIWi6CGij" class="btn ghost" id="quizRetry"><!--pnid:VwCiumzR5GbzX7oQKwDyMV-->重新开始</button>
+        </div>
+      </div>
+
+      <div data-page-node-id="H4bTMDv2z2tndjIbyE8ADP" class="result" id="quizResult" style="display:none">
+        <h3 data-page-node-id="yrnSe9VbiBPROUESTNU2ZV" id="resultTitle"><!--pnid:jluUcPBZ2uSwAUmWbnnITh-->测验完成！</h3>
+        <div data-page-node-id="jhmytCW8mf4VxY9ONF5lVo" id="resultBody"></div>
+        <div data-page-node-id="YIliIec82zNzYVfO4mLLut" class="quiz-actions"><button data-page-node-id="lhKMEAeosUKGQIYivwEvXx" class="btn" id="resultRetry"><!--pnid:BxFJiw5ZCmfGH5znZIYmwF-->再测一次</button></div>
+      </div>
+    </div>
+    <div data-page-node-id="YsvH4uiLcuj5cdf7nHaFWv" class="note"><!--pnid:jPPdktlrgUO8Fu0vS0KiRX-->提示：选择题即时判分；若想练“填空自测”，请使用上方【④ 英文练习】。测验题目均改编自本次月考的薄弱专题。</div>
+  </section>
+
+  <div data-page-node-id="tQjy207gAiuFCoDzQfGcPg" class="footer"><!--pnid:z0OTskvUsIp3sDKrlZrJnK-->IFY Technical Maths (IFYTM001) · Monthly Test 1 诊断报告 · 由 NCUK 广州国际学习中心教学团队整理 · 网页版可离线使用</div>
+</div>
+
+<script data-page-node-id="IuUk4BmR6adIggQ9sgDPxl" data-pnid-children="teG2t2V5DcGZS7tyDtwuXt">
+/* ============ 英文练习数据 ============ */
+const practice = [
+  {en:"The line passes through (1, 2) and (4, k) and has gradient 3. Find k.  k = ______",
+   zh:"一条直线经过点 (1, 2) 和 (4, k)，斜率为 3。求 k 的值。",
+   ans:"k = 11",
+   exp:"梯度 = (k−2)/(4−1) = 3 ⇒ k−2 = 9 ⇒ k = 11。注意分母是横坐标差 4−1=3。"},
+  {en:"A circle has equation (x − 3)² + (y + 2)² = 25. State its centre and radius.  Centre = (___, ___), radius = ___.",
+   zh:"圆的方程为 (x−3)² + (y+2)² = 25。写出圆心坐标和半径。",
+   ans:"Centre (3, −2), radius 5",
+   exp:"标准式 (x−a)²+(y−b)²=r²，故 a=3, b=−2, r²=25 ⇒ r=5（半径取正值，不是 25）。"},
+  {en:"The equation 3x² − 4x + k = 0 has no real roots. Find the condition on k.  k ______.",
+   zh:"方程 3x² − 4x + k = 0 无实根。求 k 满足的条件。",
+   ans:"k > 4/3",
+   exp:"无实根 ⇔ Δ < 0：b²−4ac = 16 − 12k < 0 ⇒ 12k > 16 ⇒ k > 4/3。"},
+  {en:"Given f(2) = 0 for a polynomial f(x), write down a factor of f(x).  Factor: ______.",
+   zh:"已知多项式 f(x) 满足 f(2)=0，写出 f(x) 的一个因式。",
+   ans:"(x − 2)",
+   exp:"因式定理：f(a)=0 ⇔ (x−a) 是因式，此处 a=2，故 (x−2) 是因式。"},
+  {en:"When f(x) is divided by (x − 1), the remainder is f(___). If f(x)=x³−2x²−5x+6, the remainder is ______.",
+   zh:"当 f(x) 除以 (x−1) 时，余式为 f(___)。若 f(x)=x³−2x²−5x+6，余式为______。",
+   ans:"1 ; remainder = 0",
+   exp:"余数定理：除以 (x−a) 余 f(a)，故 a=1。f(1)=1−2−5+6=0，余数为 0，说明 (x−1) 是因式。"},
+  {en:"f(x) = x² − 2, x ∈ ℝ. The range of f is f(x) ______.",
+   zh:"f(x)=x²−2（x 为实数），求 f 的值域。",
+   ans:"f(x) ≥ −2",
+   exp:"x² ≥ 0 对所有实数成立 ⇒ x²−2 ≥ −2，且当 x=0 时取到 −2，故值域为 f(x) ≥ −2。"},
+  {en:"Find the inverse of f(x) = (x − 3)/2.  f⁻¹(x) = ______.",
+   zh:"求函数 f(x)=(x−3)/2 的反函数。",
+   ans:"f⁻¹(x) = 2x + 3",
+   exp:"令 y=(x−3)/2，互换 x,y 得 x=(y−3)/2 ⇒ y−3=2x ⇒ y=2x+3。注意：反函数是逆运算，不是 1/f(x)。"},
+  {en:"f(x) = 2x + 1, g(x) = x². Find fg(2).  fg(2) = ______.",
+   zh:"f(x)=2x+1，g(x)=x²，求 fg(2)。",
+   ans:"fg(2) = 9",
+   exp:"fg(2)=f(g(2))。先 g(2)=2²=4，再 f(4)=2×4+1=9。（注意 fg 是复合，不是 f×g。）"},
+  {en:"The graph of y = f(x) is reflected in the y-axis. The new equation is y = ______.",
+   zh:"曲线 y=f(x) 关于 y 轴反射，新曲线的方程是 y=______。",
+   ans:"y = f(−x)",
+   exp:"关于 y 轴反射：把每个 x 换成 −x，故 y=f(−x)。关于 x 轴反射才是 y=−f(x)。"},
+  {en:"One root of x³ − 2x² − 5x + 6 = 0 is x = ______.",
+   zh:"方程 x³−2x²−5x+6=0 的一个根是 x=______。",
+   ans:"x = 3 (also −2, 1)",
+   exp:"代入检验：f(3)=27−18−15+6=0，故 x=3 是根；分解得 (x−3)(x+2)(x−1)=0，根为 3, −2, 1。"},
+  {en:"Write f(x)=x²−6x+10 in the form (x−p)²+q, then state its minimum value.  f(x)=(x−___)²+___, min = ___.",
+   zh:"将 f(x)=x²−6x+10 写成 (x−p)²+q 的形式，并写出最小值。",
+   ans:"(x−3)² + 1, minimum = 1",
+   exp:"配平方：x²−6x+10 = (x²−6x+9)+1 = (x−3)²+1。平方项 ≥0，最小值在 x=3 时取到 1。"},
+  {en:"f(x)=x². Translate its graph 2 units right and 3 units up. New equation y=______, minimum point (___, ___).",
+   zh:"f(x)=x²，图像向右平移 2 单位、向上平移 3 单位。新方程为 y=______，最低点为(___,___)。",
+   ans:"y = (x−2)² + 3, minimum point (2, 3)",
+   exp:"右移 2 ⇒ x−2；上移 3 ⇒ +3，故 y=(x−2)²+3。顶点由 (0,0) 移到 (2,3)。"}
+];
+
+/* 渲染英文练习 */
+(function(){
+  const list = document.getElementById('practiceList');
+  practice.forEach((p,i)=>{
+    const card = document.createElement('div');
+    card.className='qcard';
+    card.innerHTML = `
+      <div class="qnum">练习 ${i+1}</div>
+      <div class="en-q">${p.en.replace(/______/g,'<b>______</b>')}</div>
+      <div class="zh-hint">👉 先自己把英文翻译成中文，再在下方自填答案，做完后再点开核对。</div>
+      <input class="self-input" placeholder="在此自填答案（可选），再核对下方内容…">
+      <button class="toggle" onclick="this.parentElement.querySelector('.ans-body').style.display='block';this.style.display='none';">显示中文意思 · 答案与解析 ▾</button>
+      <div class="ans-body">
+        <div class="zh-q"><b>中文意思：</b>${p.zh}</div>
+        <p class="ans">标准答案：${p.ans}</p>
+        <div class="exp"><b>详细解析：</b>${p.exp}</div>
+      </div>`;
+    list.appendChild(card);
+  });
+})();
+
+/* ============ Tabs 切换 ============ */
+const tabs = document.getElementById('tabs');
+tabs.addEventListener('click', e=>{
+  const b = e.target.closest('button'); if(!b) return;
+  [...tabs.children].forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  const t = b.dataset.t;
+  ['analysis','knowledge','practice','plan','quiz'].forEach(id=>{
+    document.getElementById(id).style.display = (id===t)?'block':'none';
+  });
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+
+/* ============ 错题重做测验 ============ */
+const quizBank = [
+  {topic:'图像变换', q:"The graph of f(x)=x² is translated 2 units right and 3 units up. What is the new equation?", opts:["y=(x+2)²+3","y=(x−2)²+3","y=(x−2)²−3","y=x²+5"], a:1,
+   fb:"右移 2 ⇒ x−2；上移 3 ⇒ +3，故 y=(x−2)²+3。'右减左加、上加下减'。"},
+  {topic:'图像变换', q:"The graph of y=f(x) is reflected in the y-axis. What is the new equation?", opts:["y=−f(x)","y=f(−x)","y=f(x)+c","y=f(x−c)"], a:1,
+   fb:"关于 y 轴反射把 x 换成 −x ⇒ y=f(−x)；关于 x 轴反射才是 y=−f(x)。"},
+  {topic:'图像变换', q:"The graph of y=f(x) is reflected in the x-axis. What is the new equation?", opts:["y=f(−x)","y=−f(x)","y=f(x−1)","y=f(x)+1"], a:1,
+   fb:"关于 x 轴反射把函数值变号 ⇒ y=−f(x)。"},
+  {topic:'图像变换', q:"f(x)=x² is stretched vertically by a scale factor of 2. What is the new equation?", opts:["y=2+x²","y=(2x)²","y=2x²","y=x²/2"], a:2,
+   fb:"沿 y 轴拉伸 k 倍 ⇒ y=k·f(x)=2x²。"},
+  {topic:'多项式', q:"If f(2)=0, then (x−2) is a ______ of f(x).", opts:["remainder","factor","derivative","inverse function"], a:1,
+   fb:"因式定理：f(a)=0 ⇔ (x−a) 是因式，故 (x−2) 是因式。"},
+  {topic:'多项式', q:"When f(x) is divided by (x−1), the remainder is:", opts:["f(0)","f(1)","f(−1)","0"], a:1,
+   fb:"余数定理：除以 (x−a) 余数为 f(a)，此处 a=1 ⇒ 余数 f(1)。"},
+  {topic:'多项式', q:"Given that (x−2) is a factor of 2x³+ax²+bx−6, find the value of 2a+b.", opts:["-5","5","-6","6"], a:0,
+   fb:"由因式定理，把 x=2 代入 f(x)=0：2·8+4a+2b−6=0，即 16+4a+2b−6=0，整理得 4a+2b=−10，两边除以 2 得 2a+b=−5。注意常数项 −6 不能漏算。"},
+  {topic:'多项式', q:"For g(x)=x³−3x²−4x+12, which of the following is NOT a linear factor?", opts:["(x−2)","(x+2)","(x−3)","(x+3)"], a:3,
+   fb:"分组：x²(x−3)−4(x−3)=(x−3)(x²−4)=(x−3)(x−2)(x+2)，故根为 3,2,−2，(x+3) 不是因式。"},
+  {topic:'反函数', q:"The inverse function of f(x)=(x−3)/2 is:", opts:["2x−3","2x+3","(x+3)/2","1/((x−3)/2)"], a:1,
+   fb:"互换 x,y：x=(y−3)/2 ⇒ y=2x+3。反函数 f⁻¹(x) 不是倒数 1/f(x)。"},
+  {topic:'反函数', q:"Which statement about inverse functions is correct?", opts:["f⁻¹(x)=1/f(x)","The domain of f⁻¹ equals the range of f","An inverse always exists","f⁻¹(x)=f(x)"], a:1,
+   fb:"反函数定义域等于原函数的值域；反函数≠倒数，且仅当函数一一对应时存在。"},
+  {topic:'反函数', q:"For f⁻¹ to exist, f must be ______ on its domain.", opts:["continuous","one-to-one (monotonic)","has a maximum","an even function"], a:1,
+   fb:"只有一一对应（如单调）的函数才有反函数；限定定义域使其单调即可求反。"},
+  {topic:'圆', q:"For the circle (x−3)²+(y+2)²=25, the centre and radius are:", opts:["(3,−2), r=5","(−3,2), r=5","(3,−2), r=25","(3,2), r=5"], a:0,
+   fb:"标准式 (x−a)²+(y−b)²=r² ⇒ 圆心 (3,−2)，r=√25=5（半径不是 25）。"},
+  {topic:'圆', q:"A circle has centre (2c,−c) and radius 5c, and passes through L(−2,3c), with c>0. Find c.", opts:["c=2","c=−1","c=5","c=1/2"], a:0,
+   fb:"距离平方=(2c+2)²+(4c)²=25c² ⇒ 4c²+8c+4+16c²=25c² ⇒ 5c²−8c−4=0 ⇒ (5c+2)(c−2)=0 ⇒ c=2 (c>0)。"},
+  {topic:'值域', q:"For f(x)=x²−2 (x∈ℝ), the range is:", opts:["f≥2","f≤−2","f≥−2","f≥0"], a:2,
+   fb:"x²≥0 ⇒ x²−2≥−2，当 x=0 取到 −2，故值域 f(x)≥−2。"},
+  {topic:'判别式', q:"The equation 3x²−4x+k=0 has no real roots. Then k satisfies:", opts:["k>4/3","k<4/3","k=4/3","k≥4/3"], a:0,
+   fb:"Δ=16−12k<0 ⇒ k>4/3（且无实根需为二次方程，已满足）。"},
+  {topic:'直线', q:"For the line 3x+5y+7=0, its gradient is ______ and the gradient of a perpendicular line is ______.", opts:["−3/5, 5/3","3/5, −5/3","−3/5, −5/3","5/3, −3/5"], a:0,
+   fb:"化为 y=−3/5 x −7/5，斜率 −3/5；垂线斜率为负倒数 5/3。"},
+  {topic:'复合函数', q:"If f(x)=2x+1 and g(x)=x², then fg(2) equals:", opts:["5","9","11","25"], a:1,
+   fb:"fg(2)=f(g(2))=f(4)=2·4+1=9。复合 fg 是先 g 后 f，不是相乘。"}
+];
+
+const defaultTopic = '图像变换';
+const topics = ['全部', ...Array.from(new Set(quizBank.map(q=>q.topic)))];
+let quizSet=[], qi=0, qScore=0, qAnswered=false;
+
+const chipsEl=document.getElementById('quizChips');
+topics.forEach((t,i)=>{
+  const c=document.createElement('span');
+  c.className='chip'+((topics[i]===defaultTopic)?' active':'');
+  c.textContent=t;
+  c.onclick=()=>{ [...chipsEl.children].forEach(x=>x.classList.remove('active')); c.classList.add('active'); startQuiz(t); };
+  chipsEl.appendChild(c);
+});
+
+function startQuiz(filter){
+  quizSet = (filter==='全部')? quizBank.slice() : quizBank.filter(q=>q.topic===filter);
+  // 打乱顺序
+  quizSet.sort(()=>Math.random()-0.5);
+  qi=0; qScore=0; qAnswered=false;
+  document.getElementById('quizResult').style.display='none';
+  document.getElementById('quizCard').style.display='block';
+  renderQuiz();
+}
+
+function renderQuiz(){
+  const q=quizSet[qi];
+  document.getElementById('quizProg').textContent=`第 ${qi+1} / ${quizSet.length} 题`;
+  document.getElementById('quizBarFill').style.width = (qi/quizSet.length*100)+'%';
+  document.getElementById('quizScore').textContent=`答对 ${qScore} 题`;
+  document.getElementById('quizQ').textContent=`【${q.topic}】 ${q.q}`;
+  const optsEl=document.getElementById('quizOpts');
+  optsEl.innerHTML='';
+  q.opts.forEach((o,idx)=>{
+    const b=document.createElement('button');
+    b.className='opt'; b.textContent=o;
+    b.onclick=()=>choose(idx,b);
+    optsEl.appendChild(b);
+  });
+  const fb=document.getElementById('quizFb');
+  fb.className='feedback'; fb.innerHTML='';
+  document.getElementById('quizNext').disabled=true;
+  qAnswered=false;
+}
+
+function choose(idx, btn){
+  if(qAnswered) return;
+  qAnswered=true;
+  const q=quizSet[qi];
+  const opts=document.querySelectorAll('#quizOpts .opt');
+  opts.forEach((b,j)=>{
+    b.disabled=true;
+    if(j===q.a) b.classList.add('correct');
+  });
+  const fb=document.getElementById('quizFb');
+  if(idx===q.a){
+    qScore++;
+    btn.classList.add('correct');
+    fb.className='feedback ok show';
+    fb.innerHTML=`<b>✓ 正确！</b> ${q.fb}`;
+  }else{
+    btn.classList.add('wrong');
+    fb.className='feedback no show';
+    fb.innerHTML=`<b>✗ 不正确。</b> 正确答案：<b>${q.opts[q.a]}</b><br>${q.fb}`;
+  }
+  document.getElementById('quizScore').textContent=`答对 ${qScore} 题`;
+  document.getElementById('quizBarFill').style.width = ((qi+1)/quizSet.length*100)+'%';
+  document.getElementById('quizNext').disabled=false;
+}
+
+document.getElementById('quizNext').onclick=()=>{
+  qi++;
+  if(qi<quizSet.length){ renderQuiz(); }
+  else { showResult(); }
+};
+
+function showResult(){
+  document.getElementById('quizCard').style.display='none';
+  const res=document.getElementById('quizResult');
+  res.style.display='block';
+  const total=quizSet.length;
+  const pct=Math.round(qScore/total*100);
+  let grade = pct>=85?'优秀，薄弱点已基本突破 💪':pct>=60?'合格，继续巩固错题 🔧':'需重点回看对应专题 📚';
+  document.getElementById('resultTitle').textContent=`测验完成！正确 ${qScore} / ${total}（${pct}%）`;
+  let html=`<p style="font-size:14px;color:#475569;font-weight:700;">${grade}</p>`;
+  html+=`<div style="margin-top:10px;">`;
+  quizSet.forEach((q,i)=>{
+    html+=`<div class="review-item"><span class="rqq">${i+1}. 【${q.topic}】${q.q}</span><br>答案：<b>${q.opts[q.a]}</b></div>`;
+  });
+  html+=`</div>`;
+  html+=`<div class="tip" style="margin-top:12px;">回看对应专题：切换上方标签重新筛选练习；或在【② 重点知识点】中复习概念。</div>`;
+  document.getElementById('resultBody').innerHTML=html;
+}
+
+document.getElementById('quizRetry').onclick=()=>{
+  const active=chipsEl.querySelector('.chip.active');
+  startQuiz(active?active.textContent:'全部');
+};
+document.getElementById('resultRetry').onclick=()=>{
+  const active=chipsEl.querySelector('.chip.active');
+  startQuiz(active?active.textContent:'全部');
+};
+
+/* 默认启动全部 */
+startQuiz(defaultTopic);
+</script>
+</body>
+</html>
