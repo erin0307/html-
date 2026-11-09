@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NCUK 广州国际学习中心 — 学生学情分析报告</title>
+<title>NCUK 广州国际学习中心 — 学情报告</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -15,76 +15,40 @@
   .header {
     background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
     color: #fff;
-    padding: 48px 24px 40px;
+    padding: 40px 24px 36px;
     text-align: center;
   }
-  .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
-  .header p { font-size: 15px; opacity: 0.9; }
+  .header h1 { font-size: 24px; font-weight: 700; margin-bottom: 6px; }
+  .header p { font-size: 14px; opacity: 0.9; }
   .container {
-    max-width: 600px;
-    margin: -24px auto 48px;
-    padding: 0 20px;
+    max-width: 560px;
+    margin: -20px auto 48px;
+    padding: 0 16px;
   }
-
-  .login-box {
+  .card {
     background: #fff;
     border-radius: 12px;
-    padding: 36px 28px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    text-align: center;
-  }
-  .login-box h2 { font-size: 20px; margin-bottom: 8px; color: #2d3436; }
-  .login-box p { font-size: 14px; color: #888; margin-bottom: 24px; }
-  .login-select {
-    width: 100%;
-    padding: 14px 16px;
-    font-size: 16px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    background: #fff;
-    color: #2d3436;
-    cursor: pointer;
-    outline: none;
-  }
-  .login-select:focus { border-color: #c0392b; }
-  .login-btn {
-    width: 100%;
-    padding: 14px;
-    margin-top: 14px;
-    font-size: 16px;
-    font-weight: 600;
-    background: #c0392b;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  .login-btn:hover { background: #a93226; }
-
-  .report-box {
-    background: #fff;
-    border-radius: 12px;
-    padding: 32px 28px;
+    padding: 32px 24px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   }
-  .report-header {
+  .student-header {
     text-align: center;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
     padding-bottom: 20px;
     border-bottom: 2px solid #f0f0f0;
   }
-  .report-header .student-name { font-size: 24px; font-weight: 700; color: #c0392b; }
-  .report-header .class-tag {
+  .student-header .name { font-size: 26px; font-weight: 700; color: #c0392b; }
+  .student-header .tag {
     display: inline-block;
     margin-top: 8px;
-    padding: 4px 12px;
+    padding: 4px 14px;
     font-size: 13px;
     background: #fdf2f0;
     color: #c0392b;
     border-radius: 20px;
   }
   .report-list { display: flex; flex-direction: column; gap: 12px; }
-  .report-item {
+  .report-link {
     display: flex;
     align-items: center;
     padding: 16px 18px;
@@ -92,35 +56,68 @@
     border-radius: 8px;
     text-decoration: none;
     color: #2d3436;
-    transition: all 0.2s;
     border: 1px solid #eee;
+    transition: all 0.2s;
   }
-  .report-item:hover {
+  .report-link:hover {
     background: #fff;
     border-color: #c0392b;
     box-shadow: 0 4px 12px rgba(192,57,43,0.12);
     transform: translateY(-2px);
   }
-  .report-icon { font-size: 24px; margin-right: 14px; }
-  .report-info { flex: 1; }
+  .report-icon { font-size: 28px; margin-right: 14px; }
+  .report-text { flex: 1; }
   .report-title { font-size: 16px; font-weight: 600; }
   .report-desc { font-size: 13px; color: #999; margin-top: 2px; }
-  .report-arrow { color: #ccc; font-size: 20px; }
-  .no-report { text-align: center; padding: 40px 20px; color: #999; }
-  .no-report .emoji { font-size: 48px; margin-bottom: 12px; }
-  .logout-btn {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    margin-top: 20px;
+  .report-go { color: #ccc; font-size: 22px; }
+  .empty { text-align: center; padding: 40px 20px; color: #999; }
+  .empty .emoji { font-size: 48px; margin-bottom: 12px; }
+
+  /* Name selection page */
+  .select-box { text-align: center; }
+  .select-box h2 { font-size: 20px; margin-bottom: 6px; }
+  .select-box p { font-size: 14px; color: #888; margin-bottom: 20px; }
+  .class-group { margin-bottom: 16px; }
+  .class-label {
     font-size: 14px;
-    background: #f0f0f0;
-    color: #666;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    font-weight: 600;
+    color: #c0392b;
+    text-align: left;
+    margin-bottom: 10px;
+    padding-left: 4px;
   }
-  .logout-btn:hover { background: #e0e0e0; }
+  .name-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .name-btn {
+    padding: 10px 6px;
+    font-size: 14px;
+    background: #f8f9fa;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #2d3436;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.15s;
+  }
+  .name-btn:hover {
+    background: #c0392b;
+    color: #fff;
+    border-color: #c0392b;
+  }
+  .name-btn.has-report {
+    background: #fdf2f0;
+    border-color: #f5c6cb;
+    color: #c0392b;
+    font-weight: 500;
+  }
+  .name-btn.has-report:hover {
+    background: #c0392b;
+    color: #fff;
+  }
   .footer { text-align: center; padding: 24px; color: #aaa; font-size: 13px; }
   .hidden { display: none; }
 </style>
@@ -129,55 +126,32 @@
 
 <div class="header">
   <h1>NCUK 广州国际学习中心</h1>
-  <p>学生学情分析报告系统</p>
+  <p>学生学情分析报告</p>
 </div>
 
 <div class="container">
 
-  <div class="login-box" id="loginScreen">
-    <h2>请选择你的姓名</h2>
-    <p>选择后只能查看你自己的学情报告</p>
-    <select class="login-select" id="studentSelect">
-      <option value="">— 请选择姓名 —</option>
-      <optgroup label="文商班">
-        <option value="陈文慧">陈文慧</option>
-        <option value="陈梁烽">陈梁烽</option>
-        <option value="陈玫仰">陈玫仰</option>
-        <option value="丁灿铭">丁灿铭</option>
-        <option value="丁奕阳">丁奕阳</option>
-        <option value="段泽原">段泽原</option>
-        <option value="黄商怡">黄商怡</option>
-        <option value="李坤宸">李坤宸</option>
-        <option value="李志强">李志强</option>
-        <option value="刘锐恒">刘锐恒</option>
-        <option value="石奈儿">石奈儿</option>
-        <option value="王加珲">王加珲</option>
-        <option value="徐徐锣涛">徐徐锣涛</option>
-        <option value="徐彦霖">徐彦霖</option>
-        <option value="张梓妍">张梓妍</option>
-        <option value="周清华">周清华</option>
-        <option value="周盈">周盈</option>
-      </optgroup>
-      <optgroup label="理工班">
-        <option value="廖裕源">廖裕源</option>
-        <option value="刘鹏翔">刘鹏翔</option>
-        <option value="曲宸毅">曲宸毅</option>
-        <option value="吴昊峻">吴昊峻</option>
-        <option value="夏一凡">夏一凡</option>
-        <option value="叶子峻">叶子峻</option>
-        <option value="朱恒羽">朱恒羽</option>
-      </optgroup>
-    </select>
-    <button class="login-btn" onclick="showReport()">查看我的报告</button>
-  </div>
-
-  <div class="report-box hidden" id="reportScreen">
-    <div class="report-header">
-      <div class="student-name" id="reportName"></div>
-      <div class="class-tag" id="reportClass"></div>
+  <!-- Student report page (shown when URL has #studentName) -->
+  <div class="card hidden" id="reportPage">
+    <div class="student-header">
+      <div class="name" id="studentName"></div>
+      <div class="tag" id="studentClass"></div>
     </div>
     <div class="report-list" id="reportList"></div>
-    <button class="logout-btn" onclick="logout()">退出，返回姓名选择</button>
+  </div>
+
+  <!-- Name selection page (default) -->
+  <div class="card select-box" id="selectPage">
+    <h2>请选择你的姓名</h2>
+    <p>点击后查看你的学情报告</p>
+    <div class="class-group">
+      <div class="class-label">📘 文商班</div>
+      <div class="name-grid" id="wsNames"></div>
+    </div>
+    <div class="class-group">
+      <div class="class-label">📗 理工班</div>
+      <div class="name-grid" id="lgNames"></div>
+    </div>
   </div>
 
 </div>
@@ -185,88 +159,115 @@
 <div class="footer">NCUK Guangzhou International Study Centre</div>
 
 <script>
-const studentData = {
-  "陈文慧": { class: "文商班", reports: [
+// 学生数据：key = 拼音/英文标识（用于URL），value = 姓名+班级+报告列表
+const students = {
+  "chenwenhui": { name: "陈文慧", class: "文商班", reports: [
     { title: "经济复习与提升计划", desc: "EAP Economics", icon: "📈", url: "https://workbuddy.link/p/B4jTO84wuSPJvC3eBgHtYE?source=2" },
     { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://www.workbuddy.cn/space/d/z8u3QyPTbKVZJCTqc2f6i6?source=3" }
   ]},
-  "陈梁烽": { class: "文商班", reports: [] },
-  "陈玫仰": { class: "文商班", reports: [] },
-  "丁灿铭": { class: "文商班", reports: [
+  "chenliangfeng": { name: "陈梁烽", class: "文商班", reports: [] },
+  "chenmeiyang": { name: "陈玫仰", class: "文商班", reports: [] },
+  "dingcanming": { name: "丁灿铭", class: "文商班", reports: [
     { title: "经济复习与提升计划", desc: "EAP Economics", icon: "📈", url: "https://workbuddy.link/p/8aAYj4tvXSM9yp06iLmne4?source=2" },
     { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/0EveHtDhyRbvV0gIXHFbDI?source=2" }
   ]},
-  "丁奕阳": { class: "文商班", reports: [] },
-  "段泽原": { class: "文商班", reports: [
+  "dingyiyang": { name: "丁奕阳", class: "文商班", reports: [] },
+  "duanzeyuan": { name: "段泽原", class: "文商班", reports: [
     { title: "经济复习与提升计划", desc: "EAP Economics", icon: "📈", url: "https://workbuddy.link/p/NPWVuiNON4lIT2V41HDdYS?source=2" },
     { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/vbQwhgujNjjar7wYRoXlbe?source=2" }
   ]},
-  "黄商怡": { class: "文商班", reports: [
+  "huangshangyi": { name: "黄商怡", class: "文商班", reports: [
     { title: "经济复习与提升计划", desc: "EAP Economics", icon: "📈", url: "https://workbuddy.link/p/XCVqTZlQFClTtnri6pfIX9?source=2" }
   ]},
-  "李坤宸": { class: "文商班", reports: [
+  "likunchen": { name: "李坤宸", class: "文商班", reports: [
     { title: "经济复习与提升计划", desc: "EAP Economics", icon: "📈", url: "https://workbuddy.link/p/eQ5syHLoY5Xj8YZClf3bBJ?source=2" }
   ]},
-  "李志强": { class: "文商班", reports: [
+  "lizhiqiang": { name: "李志强", class: "文商班", reports: [
     { title: "经济复习与提升计划", desc: "EAP Economics", icon: "📈", url: "https://workbuddy.link/p/6iC9AhlTY45vYhfhBkekvB?source=2" },
     { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/MhVamP9jb8OY4PLdtnyJ9P?source=2" }
   ]},
-  "刘锐恒": { class: "文商班", reports: [] },
-  "石奈儿": { class: "文商班", reports: [] },
-  "王加珲": { class: "文商班", reports: [
+  "liiuheng": { name: "刘锐恒", class: "文商班", reports: [] },
+  "shinaier": { name: "石奈儿", class: "文商班", reports: [] },
+  "wangjiahui": { name: "王加珲", class: "文商班", reports: [
     { title: "经济复习与提升计划", desc: "EAP Economics", icon: "📈", url: "https://workbuddy.link/p/UiCVrbQLfIhQr9oaOm8lHW?source=2" },
     { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/HxrUbyfFLFybdCSEfbyyYa?source=2" }
   ]},
-  "徐徐锣涛": { class: "文商班", reports: [] },
-  "徐彦霖": { class: "文商班", reports: [] },
-  "张梓妍": { class: "文商班", reports: [] },
-  "周清华": { class: "文商班", reports: [
+  "xuxuluotao": { name: "徐徐锣涛", class: "文商班", reports: [] },
+  "xuyanlin": { name: "徐彦霖", class: "文商班", reports: [] },
+  "zhangziyan": { name: "张梓妍", class: "文商班", reports: [] },
+  "zhouqinghua": { name: "周清华", class: "文商班", reports: [
     { title: "经济复习与提升计划", desc: "EAP Economics", icon: "📈", url: "https://workbuddy.link/p/lB6QTp2dGf5ZOjCVvAbHIM?source=2" },
     { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/mbSAvHaibsPQE9y0IG94KB?source=2" }
   ]},
-  "周盈": { class: "文商班", reports: [
+  "zhouying": { name: "周盈", class: "文商班", reports: [
     { title: "经济复习与提升计划", desc: "EAP Economics", icon: "📈", url: "https://workbuddy.link/p/ZME7eDajpf6k2ec9fD1o5L?source=2" },
     { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/XcWsiyaHIggaJrcjYMANwT?source=2" }
   ]},
-  "廖裕源": { class: "理工班", reports: [] },
-  "刘鹏翔": { class: "理工班", reports: [] },
-  "曲宸毅": { class: "理工班", reports: [] },
-  "吴昊峻": { class: "理工班", reports: [
+  "liaoyuyuan": { name: "廖裕源", class: "理工班", reports: [] },
+  "liupengxiang": { name: "刘鹏翔", class: "理工班", reports: [] },
+  "quchenyi": { name: "曲宸毅", class: "理工班", reports: [] },
+  "wuhaojun": { name: "吴昊峻", class: "理工班", reports: [
     { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/BppZaCQBapgaqPH1m0BwVK?source=2" }
   ]},
-  "夏一凡": { class: "理工班", reports: [] },
-  "叶子峻": { class: "理工班", reports: [] },
-  "朱恒羽": { class: "理工班", reports: [] }
+  "xiaYifan": { name: "夏一凡", class: "理工班", reports: [] },
+  "yezijun": { name: "叶子峻", class: "理工班", reports: [] },
+  "zhuhengyu": { name: "朱恒羽", class: "理工班", reports: [] }
 };
 
-function showReport() {
-  const name = document.getElementById('studentSelect').value;
-  if (!name) { alert('请先选择你的姓名'); return; }
-  const data = studentData[name];
-  document.getElementById('reportName').textContent = name;
-  document.getElementById('reportClass').textContent = data.class;
-  const list = document.getElementById('reportList');
-  list.innerHTML = '';
-  if (data.reports.length === 0) {
-    list.innerHTML = '<div class="no-report"><div class="emoji">📝</div><p>暂无已发布的报告<br>请等待老师更新</p></div>';
-  } else {
-    data.reports.forEach(r => {
-      list.innerHTML += '<a class="report-item" href="' + r.url + '" target="_blank">' +
-        '<div class="report-icon">' + r.icon + '</div>' +
-        '<div class="report-info"><div class="report-title">' + r.title + '</div>' +
-        '<div class="report-desc">' + r.desc + '</div></div>' +
-        '<div class="report-arrow">›</div></a>';
-    });
+function renderSelectPage() {
+  const ws = document.getElementById('wsNames');
+  const lg = document.getElementById('lgNames');
+  ws.innerHTML = '';
+  lg.innerHTML = '';
+  for (const [key, s] of Object.entries(students)) {
+    const btn = document.createElement('a');
+    btn.className = 'name-btn' + (s.reports.length > 0 ? ' has-report' : '');
+    btn.textContent = s.name;
+    btn.href = '#' + key;
+    if (s.class === '文商班') ws.appendChild(btn);
+    else lg.appendChild(btn);
   }
-  document.getElementById('loginScreen').classList.add('hidden');
-  document.getElementById('reportScreen').classList.remove('hidden');
 }
 
-function logout() {
-  document.getElementById('studentSelect').value = '';
-  document.getElementById('reportScreen').classList.add('hidden');
-  document.getElementById('loginScreen').classList.remove('hidden');
+function renderReport(key) {
+  const s = students[key];
+  if (!s) return;
+  document.getElementById('studentName').textContent = s.name;
+  document.getElementById('studentClass').textContent = s.class;
+  const list = document.getElementById('reportList');
+  list.innerHTML = '';
+  if (s.reports.length === 0) {
+    list.innerHTML = '<div class="empty"><div class="emoji">📝</div><p>暂无已发布的报告<br>请等待老师更新</p></div>';
+  } else {
+    s.reports.forEach(r => {
+      const a = document.createElement('a');
+      a.className = 'report-link';
+      a.href = r.url;
+      a.target = '_blank';
+      a.innerHTML = '<div class="report-icon">' + r.icon + '</div>' +
+        '<div class="report-text"><div class="report-title">' + r.title + '</div>' +
+        '<div class="report-desc">' + r.desc + '</div></div>' +
+        '<div class="report-go">›</div>';
+      list.appendChild(a);
+    });
+  }
+  document.getElementById('selectPage').classList.add('hidden');
+  document.getElementById('reportPage').classList.remove('hidden');
 }
+
+function route() {
+  const hash = location.hash.slice(1);
+  if (hash && students[hash]) {
+    renderReport(hash);
+  } else {
+    renderSelectPage();
+    document.getElementById('reportPage').classList.add('hidden');
+    document.getElementById('selectPage').classList.remove('hidden');
+  }
+}
+
+window.addEventListener('hashchange', route);
+route();
 </script>
 
 </body>
