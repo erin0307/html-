@@ -72,52 +72,13 @@
   .report-go { color: #ccc; font-size: 22px; }
   .empty { text-align: center; padding: 40px 20px; color: #999; }
   .empty .emoji { font-size: 48px; margin-bottom: 12px; }
-
-  /* Name selection page */
-  .select-box { text-align: center; }
-  .select-box h2 { font-size: 20px; margin-bottom: 6px; }
-  .select-box p { font-size: 14px; color: #888; margin-bottom: 20px; }
-  .class-group { margin-bottom: 16px; }
-  .class-label {
-    font-size: 14px;
-    font-weight: 600;
-    color: #c0392b;
-    text-align: left;
-    margin-bottom: 10px;
-    padding-left: 4px;
-  }
-  .name-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-  }
-  .name-btn {
-    padding: 10px 6px;
-    font-size: 14px;
-    background: #f8f9fa;
-    border: 1px solid #eee;
-    border-radius: 6px;
-    cursor: pointer;
-    color: #2d3436;
-    text-decoration: none;
+  .no-access {
     text-align: center;
-    transition: all 0.15s;
+    padding: 60px 24px;
   }
-  .name-btn:hover {
-    background: #c0392b;
-    color: #fff;
-    border-color: #c0392b;
-  }
-  .name-btn.has-report {
-    background: #fdf2f0;
-    border-color: #f5c6cb;
-    color: #c0392b;
-    font-weight: 500;
-  }
-  .name-btn.has-report:hover {
-    background: #c0392b;
-    color: #fff;
-  }
+  .no-access .emoji { font-size: 56px; margin-bottom: 16px; }
+  .no-access h2 { font-size: 18px; margin-bottom: 8px; color: #333; }
+  .no-access p { font-size: 14px; color: #999; }
   .footer { text-align: center; padding: 24px; color: #aaa; font-size: 13px; }
   .hidden { display: none; }
 </style>
@@ -131,7 +92,7 @@
 
 <div class="container">
 
-  <!-- Student report page (shown when URL has #studentName) -->
+  <!-- 学生报告页 -->
   <div class="card hidden" id="reportPage">
     <div class="student-header">
       <div class="name" id="studentName"></div>
@@ -140,18 +101,11 @@
     <div class="report-list" id="reportList"></div>
   </div>
 
-  <!-- Name selection page (default) -->
-  <div class="card select-box" id="selectPage">
-    <h2>请选择你的姓名</h2>
-    <p>点击后查看你的学情报告</p>
-    <div class="class-group">
-      <div class="class-label">📘 文商班</div>
-      <div class="name-grid" id="wsNames"></div>
-    </div>
-    <div class="class-group">
-      <div class="class-label">📗 理工班</div>
-      <div class="name-grid" id="lgNames"></div>
-    </div>
+  <!-- 无权限提示页（直接访问主页时显示） -->
+  <div class="card no-access" id="noAccessPage">
+    <div class="emoji">🔒</div>
+    <h2>请使用老师发给你的专属链接访问</h2>
+    <p>如需查看学情报告，请联系班主任获取个人专属链接</p>
   </div>
 
 </div>
@@ -159,7 +113,6 @@
 <div class="footer">NCUK Guangzhou International Study Centre</div>
 
 <script>
-// 学生数据：key = 拼音/英文标识（用于URL），value = 姓名+班级+报告列表
 const students = {
   "chenwenhui": { name: "陈文慧", class: "文商班", reports: [
     { title: "经济复习与提升计划", desc: "EAP Economics", icon: "📈", url: "https://workbuddy.link/p/B4jTO84wuSPJvC3eBgHtYE?source=2" },
@@ -169,12 +122,16 @@ const students = {
   "chenmeiyang": { name: "陈玫仰", class: "文商班", reports: [] },
   "dingcanming": { name: "丁灿铭", class: "文商班", reports: [
     { title: "经济复习与提升计划", desc: "EAP Economics", icon: "📈", url: "https://workbuddy.link/p/8aAYj4tvXSM9yp06iLmne4?source=2" },
-    { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/0EveHtDhyRbvV0gIXHFbDI?source=2" }
+    { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/0EveHtDhyRbvV0gIXHFbDI?source=2" },
+    { title: "商业研究报告", desc: "Business Research", icon: "💼", url: "https://workbuddy.link/p/KMZ5X3OGN59g6SoWy6dBCh?source=2" }
   ]},
-  "dingyiyang": { name: "丁奕阳", class: "文商班", reports: [] },
+  "dingyiyang": { name: "丁奕阳", class: "文商班", reports: [
+    { title: "商业研究报告", desc: "Business Research", icon: "💼", url: "https://workbuddy.link/p/Ti13k3igMak5PlCeZzByZp?source=2" }
+  ]},
   "duanzeyuan": { name: "段泽原", class: "文商班", reports: [
     { title: "经济复习与提升计划", desc: "EAP Economics", icon: "📈", url: "https://workbuddy.link/p/NPWVuiNON4lIT2V41HDdYS?source=2" },
-    { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/vbQwhgujNjjar7wYRoXlbe?source=2" }
+    { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/vbQwhgujNjjar7wYRoXlbe?source=2" },
+    { title: "商业研究报告", desc: "Business Research", icon: "💼", url: "https://workbuddy.link/p/y8yLfTfonUZPOc3Q1dmUOa?source=2" }
   ]},
   "huangshangyi": { name: "黄商怡", class: "文商班", reports: [
     { title: "经济复习与提升计划", desc: "EAP Economics", icon: "📈", url: "https://workbuddy.link/p/XCVqTZlQFClTtnri6pfIX9?source=2" }
@@ -184,54 +141,51 @@ const students = {
   ]},
   "lizhiqiang": { name: "李志强", class: "文商班", reports: [
     { title: "经济复习与提升计划", desc: "EAP Economics", icon: "📈", url: "https://workbuddy.link/p/6iC9AhlTY45vYhfhBkekvB?source=2" },
-    { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/MhVamP9jb8OY4PLdtnyJ9P?source=2" }
+    { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/MhVamP9jb8OY4PLdtnyJ9P?source=2" },
+    { title: "商业研究报告", desc: "Business Research", icon: "💼", url: "https://workbuddy.link/p/DqHUpWYs81PGhYI9GjwHqX?source=2" }
   ]},
   "liiuheng": { name: "刘锐恒", class: "文商班", reports: [] },
   "shinaier": { name: "石奈儿", class: "文商班", reports: [] },
   "wangjiahui": { name: "王加珲", class: "文商班", reports: [
     { title: "经济复习与提升计划", desc: "EAP Economics", icon: "📈", url: "https://workbuddy.link/p/UiCVrbQLfIhQr9oaOm8lHW?source=2" },
-    { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/HxrUbyfFLFybdCSEfbyyYa?source=2" }
+    { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/HxrUbyfFLFybdCSEfbyyYa?source=2" },
+    { title: "商业研究报告", desc: "Business Research", icon: "💼", url: "https://workbuddy.link/p/OShCLK5sdMBzijmo3R4Gv6?source=2" }
   ]},
   "xuxuluotao": { name: "徐徐锣涛", class: "文商班", reports: [] },
   "xuyanlin": { name: "徐彦霖", class: "文商班", reports: [] },
-  "zhangziyan": { name: "张梓妍", class: "文商班", reports: [] },
+  "zhangziyan": { name: "张梓妍", class: "文商班", reports: [
+    { title: "商业研究报告", desc: "Business Research", icon: "💼", url: "https://workbuddy.link/p/QDYygaHxDTjzLoWOu4jb7Z?source=2" }
+  ]},
   "zhouqinghua": { name: "周清华", class: "文商班", reports: [
     { title: "经济复习与提升计划", desc: "EAP Economics", icon: "📈", url: "https://workbuddy.link/p/lB6QTp2dGf5ZOjCVvAbHIM?source=2" },
-    { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/mbSAvHaibsPQE9y0IG94KB?source=2" }
+    { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/mbSAvHaibsPQE9y0IG94KB?source=2" },
+    { title: "商业研究报告", desc: "Business Research", icon: "💼", url: "https://workbuddy.link/p/nWTlv0HWtOMm662lj4xwfk?source=2" }
   ]},
   "zhouying": { name: "周盈", class: "文商班", reports: [
     { title: "经济复习与提升计划", desc: "EAP Economics", icon: "📈", url: "https://workbuddy.link/p/ZME7eDajpf6k2ec9fD1o5L?source=2" },
     { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/XcWsiyaHIggaJrcjYMANwT?source=2" }
   ]},
   "liaoyuyuan": { name: "廖裕源", class: "理工班", reports: [] },
-  "liupengxiang": { name: "刘鹏翔", class: "理工班", reports: [] },
+  "liupengxiang": { name: "刘鹏翔", class: "理工班", reports: [
+    { title: "高数分析及测试", desc: "Higher Mathematics", icon: "📐", url: "https://workbuddy.link/p/MCOVUo801np7esG3pwA8Ek?source=2" }
+  ]},
   "quchenyi": { name: "曲宸毅", class: "理工班", reports: [] },
   "wuhaojun": { name: "吴昊峻", class: "理工班", reports: [
-    { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/BppZaCQBapgaqPH1m0BwVK?source=2" }
+    { title: "技术数学分析及测试", desc: "Technical Mathematics", icon: "📊", url: "https://workbuddy.link/p/BppZaCQBapgaqPH1m0BwVK?source=2" },
+    { title: "高数分析及测试", desc: "Higher Mathematics", icon: "📐", url: "https://workbuddy.link/p/g319dOLlFbK6BMiOcO7lSQ?source=2" }
   ]},
   "xiaYifan": { name: "夏一凡", class: "理工班", reports: [] },
   "yezijun": { name: "叶子峻", class: "理工班", reports: [] },
   "zhuhengyu": { name: "朱恒羽", class: "理工班", reports: [] }
 };
 
-function renderSelectPage() {
-  const ws = document.getElementById('wsNames');
-  const lg = document.getElementById('lgNames');
-  ws.innerHTML = '';
-  lg.innerHTML = '';
-  for (const [key, s] of Object.entries(students)) {
-    const btn = document.createElement('a');
-    btn.className = 'name-btn' + (s.reports.length > 0 ? ' has-report' : '');
-    btn.textContent = s.name;
-    btn.href = '#' + key;
-    if (s.class === '文商班') ws.appendChild(btn);
-    else lg.appendChild(btn);
-  }
-}
-
 function renderReport(key) {
   const s = students[key];
-  if (!s) return;
+  if (!s) {
+    document.getElementById('reportPage').classList.add('hidden');
+    document.getElementById('noAccessPage').classList.remove('hidden');
+    return;
+  }
   document.getElementById('studentName').textContent = s.name;
   document.getElementById('studentClass').textContent = s.class;
   const list = document.getElementById('reportList');
@@ -251,7 +205,7 @@ function renderReport(key) {
       list.appendChild(a);
     });
   }
-  document.getElementById('selectPage').classList.add('hidden');
+  document.getElementById('noAccessPage').classList.add('hidden');
   document.getElementById('reportPage').classList.remove('hidden');
 }
 
@@ -260,9 +214,8 @@ function route() {
   if (hash && students[hash]) {
     renderReport(hash);
   } else {
-    renderSelectPage();
     document.getElementById('reportPage').classList.add('hidden');
-    document.getElementById('selectPage').classList.remove('hidden');
+    document.getElementById('noAccessPage').classList.remove('hidden');
   }
 }
 
